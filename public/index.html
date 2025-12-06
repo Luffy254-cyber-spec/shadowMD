@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShadowMD Pairing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header>
+                <h1>ShadowMD</h1>
+                <p class="subtitle">Secure Device Pairing</p>
+            </header>
+            
+            <main>
+                <form id="pairing-form">
+                    <div class="input-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" id="phoneNumber" placeholder="e.g. 1234567890" required>
+                        <span class="hint">Enter number with country code, no symbols (e.g. 628123456789)</span>
+                    </div>
+                    
+                    <button type="submit" id="submitBtn">
+                        <span class="btn-text">Get Pairing Code</span>
+                        <div class="loader" hidden></div>
+                    </button>
+                </form>
+
+                <div id="result" class="result fade-in" hidden>
+                    <h2>Pairing Code</h2>
+                    <div class="code-display" id="codeDisplay">
+                        <span id="codeText">ABCD-1234</span>
+                        <button class="copy-btn" id="copyBtn" title="Copy">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+                        </button>
+                    </div>
+                    <p class="instruction">Open WhatsApp > Linked Devices > Link a Device > Link with phone number taking.</p>
+                </div>
+            </main>
+        </div>
+        
+        <footer>
+            <p>Powered by ShadowMD</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
