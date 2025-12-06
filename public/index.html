@@ -1,51 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShadowMD Pairing</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Money Heist MD</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
-        <div class="card">
-            <header>
-                <h1>ShadowMD</h1>
-                <p class="subtitle">Secure Device Pairing</p>
-            </header>
-            
-            <main>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <div class="logo-circle"></div>
+                <span class="brand-text">MONEY HEIST MD <span class="divider">/</span> DILA LK</span>
+            </div>
+
+            <div class="nav-links">
+                <a href="#" class="nav-item">Home</a>
+                <a href="#" class="nav-item">Services</a>
+                <a href="#" class="nav-item">FAQ</a>
+                <a href="#" class="nav-item">Team</a>
+                <a href="#" class="nav-item">About</a>
+                <a href="#" class="nav-item">Contact</a>
+                <a href="#" class="nav-item">Privacy</a>
+                <a href="#" class="nav-item">Terms</a>
+            </div>
+
+            <button class="menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="glass-card">
+                <div class="card-header">
+                    <h2>Create Bot</h2>
+                    <p class="card-desc">In this Demo you can create a bot using an unverified number..Please log in to
+                        get the most exciting experience</p>
+                </div>
+
                 <form id="pairing-form">
-                    <div class="input-group">
+                    <div class="form-group">
                         <label for="phoneNumber">Phone Number</label>
-                        <input type="text" id="phoneNumber" placeholder="e.g. 1234567890" required>
-                        <span class="hint">Enter number with country code, no symbols (e.g. 628123456789)</span>
+                        <input type="text" id="phoneNumber" placeholder="Ex: 07XXXXXXXX" autocomplete="off">
                     </div>
-                    
-                    <button type="submit" id="submitBtn">
-                        <span class="btn-text">Get Pairing Code</span>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-container">
+                            I agree <a href="#" class="link-text">Terms & Privacy</a>
+                            <input type="checkbox" id="terms" required>
+                            <span class="checkmark"></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="create-btn" id="submitBtn">
+                        <span class="btn-text">Create</span>
                         <div class="loader" hidden></div>
                     </button>
                 </form>
 
-                <div id="result" class="result fade-in" hidden>
-                    <h2>Pairing Code</h2>
-                    <div class="code-display" id="codeDisplay">
-                        <span id="codeText">ABCD-1234</span>
-                        <button class="copy-btn" id="copyBtn" title="Copy">
-                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
-                        </button>
-                    </div>
-                    <p class="instruction">Open WhatsApp > Linked Devices > Link a Device > Link with phone number taking.</p>
+                <div class="card-footer">
+                    <span>You Have Account ?</span>
+                    <button class="login-btn">Login</button>
                 </div>
-            </main>
-        </div>
-        
-        <footer>
-            <p>Powered by ShadowMD</p>
+
+                <!-- Hidden Result Section for Pairing Code -->
+                <div id="result" class="result" hidden style="margin-top: 20px;">
+                    <div class="code-display" id="codeDisplay">
+                        <span id="codeText"></span>
+                        <button class="copy-btn" id="copyBtn">COPY</button>
+                    </div>
+                    <p class="instruction" style="margin-top: 10px; font-size: 0.8rem; color: #aaa;">Link this code in
+                        WhatsApp > Linked Devices</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="copyright">
+                    © 2025 DILA LK – Tech Web
+                    <span class="sub-footer">Automated Whatsapp & Your Life.</span>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms</a>
+                    <span class="dot">·</span>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
         </footer>
+
+        <!-- Cookies Banner -->
+        <div class="cookies-banner">
+            <div class="cookies-text">
+                <span class="cookie-title">Cookies:</span> We use cookies to improve your experience. See our <a
+                    href="#">Privacy Policy</a>.
+            </div>
+            <button class="accept-btn">Accept</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
